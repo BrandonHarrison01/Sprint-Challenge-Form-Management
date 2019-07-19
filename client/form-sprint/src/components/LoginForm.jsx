@@ -49,6 +49,7 @@ const FormikLoginForm = withFormik({
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.token)
+                formikBag.props.history.push('./meals')
             })
             .catch(err => {console.log(err)})
     }
